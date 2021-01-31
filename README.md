@@ -1,6 +1,6 @@
 # ⌨️Blazor를 학습
   
-  [https://github.com/dotnet-presentations/blazor-workshop](https://github.com/dotnet-presentations/blazor-workshop) 에서 제공되는 workshop으로 공부하며 주석을 달고 있습니다.
+  [https://github.com/dotnet-presentations/blazor-workshop](https://github.com/dotnet-presentations/blazor-workshop) 에서 제공되는 workshop으로 이해하며(주석) 학습합니다.
   
 1. *~~get-started.md~~*
 2. *~~components-and-layout.md~~*
