@@ -1,5 +1,5 @@
-# Comment_BlazingPizza
-BlazzingPizza를 공부하면서 이해하기 위해서 코드마다 주석을 달고 있습니다.
+# Comment_BlazingPizza  
+Blazor를 학습하기위해  [https://github.com/dotnet-presentations/blazor-workshop](https://github.com/dotnet-presentations/blazor-workshop) 에서 제공되는 workshop으로 공부하며 주석을 달고 있습니다.  
 
 ~~00-get-started.md~~  
 ~~01-components-and-layout.md~~  
