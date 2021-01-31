@@ -1,0 +1,33 @@
+﻿@page "/"
+@inject HttpClient HttpClient
+@*@page 지시문은 Index 구성 요소가 지정된 경로가 있는 라우팅 가능한 페이지 임을 지정*@
+@*@inject 는 종속성 주입*@
+
+<div class="main">
+    <ul class="pizza-cards">
+        @if (specials != null)
+        {
+            @foreach (var special in specials)
+            {
+                <li style="background-image: url('@special.ImageUrl')">
+                    <div class="pizza-info">
+                        <span class="title">@special.Name</span>
+                        @special.Description
+                        <span class="price">@special.GetFormattedBasePrice()</span>
+                    </div>
+                </li>
+            }
+        }
+    </ul>
+</div>
+
+@code
+{
+    List<PizzaSpecial> specials; // PizzaSpecial 유형은 Shared 에 서 정의되어 있음.
+
+    protected override async Task OnInitializedAsync() // OnInitializedAsync 메소드 재정의 @code 피자 스페셜 목록 검색 구성 요소가 초기화 될 때 호출
+    {
+        // GetFromJsonAsync을 사용하여 응답, JSON 역직렬화 사용
+        specials = await HttpClient.GetFromJsonAsync<List<PizzaSpecial>>("specials");
+    }
+}
